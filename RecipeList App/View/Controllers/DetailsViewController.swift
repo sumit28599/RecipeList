@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    var recipe: WelcomeElement?
+    var recipe: RecipeElement?
 
     private let recipeImageView = UIImageView()
     private let recipeNameLabel = UILabel()
@@ -42,8 +42,8 @@ class DetailsViewController: UIViewController {
         NSLayoutConstraint.activate([
             recipeImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             recipeImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            recipeImageView.heightAnchor.constraint(equalToConstant: 200),
-            recipeImageView.widthAnchor.constraint(equalToConstant: 200),
+            recipeImageView.heightAnchor.constraint(equalToConstant: view.frame.height/3),
+            recipeImageView.widthAnchor.constraint(equalToConstant: view.frame.width - 20),
 
             recipeNameLabel.topAnchor.constraint(equalTo: recipeImageView.bottomAnchor, constant: 16),
             recipeNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
